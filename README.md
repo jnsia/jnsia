@@ -1,6 +1,6 @@
 <div align=center>
   
-### Hi there 👋 
+### 🌱 SSAFY 10기 교육중! 
 </br>
 <p>도전을 즐기는 풀스택 개발자 김준수입니다!</p>
 
