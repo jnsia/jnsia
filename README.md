@@ -39,11 +39,11 @@
 
 <br>
 
-## ✨ 기술스택
+## ✨ Tech Stack
 
 <br>
 
-### Language
+### programming Language
 
 <div>
 <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
@@ -80,7 +80,7 @@
 </div>
 
 
-### DevOps
+### Cloud
 
 <div>
 <img src="https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white">
@@ -99,7 +99,7 @@
 
 <br>
 
-## ✨ 기타
+## ✨ ETC
 
 <br>
 
