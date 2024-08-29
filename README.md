@@ -1,26 +1,18 @@
-## ✨ Intoduce
+## ✨ Introduce
 
 <br>
 
-### 웹 개발자 김준수입니다.
+### 웹 개발자, 김준수입니다.
 
 <br>
 
-> 매일 마주하는 코드와 에러는 저에게 끝없는 성장의 기회를 제공합니다.
->
-> 한 줄의 코드에서도, 작은 오류에서도 호기심과 배움의 기쁨을 느낍니다.
->
-> <br>
+> 한 줄의 코드에서도, 작은 에러에서도 호기심과 성장의 기쁨을 느낍니다.
 > 
-> 어떠한 상황 속에서도 스스로가 할 수 있는 최선을 찾아내고
+> 어떠한 상황 속에서도 할 수 있는 최선을 찾아내고
 >
 > 주어진 역할에 책임감을 가지고 주도적으로 문제를 해결합니다.
 > 
-> <br>
-> 
-> 기술에 대한 제한을 두지 않고 사용자 중심으로 고민하며,
-> 
-> "보상과 인정"보다는 "성과와 성장"을 통해 나아갑니다.
+> 기술에 대한 제한을 두지 않고 사용자 중심으로 고민합니다.
 
 <br>
 
@@ -28,8 +20,8 @@
 
 <br>
 
-> - 2017.03 ~ 2023.07 | 경북대학교 응용생명과학부 생명정보학전공
-> - 2023.07 ~ 2024.06 | SSAFY(삼성 청녕 SW 아카데미) 10기
+> - 2017.03 ~ 2023.07 | 경북대학교 응용생명과학부 생물정보학전공
+> - 2023.07 ~ 2024.06 | SSAFY(삼성 청년 SW 아카데미) 10기
 
 <br>
 
@@ -104,7 +96,7 @@
 <div>
 
 [![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=kia546)](https://solved.ac/kia546/)
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=JnSia)](https://github.com/anuraghazra/github-readme-stats)
+[![JNSIA's GitHub stats](https://github-readme-stats.vercel.app/api?username=JnSia)](https://github.com/anuraghazra/github-readme-stats)
 
 </div>
 
