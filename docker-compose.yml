@@ -1,0 +1,44 @@
+version: "3.8"
+
+services:
+  nginx:
+    build:
+      context: ./client/nginx
+    ports:
+      - "80:80"
+    networks:
+      - universe-network
+
+  devlog-client:
+    build:
+      context: ./client/devlog
+    networks:
+      - universe-network
+
+  # luvlog-client:
+  #   build:
+  #     context: ./client/luvlog
+  #   networks:
+  #     - universe-network
+
+  # auth-client:
+  #   build:
+  #     context: ./client/auth
+  #   networks:
+  #     - universe-network
+
+  universe:
+    build:
+      context: ./client/universe
+    networks:
+      - universe-network
+
+  admin:
+    build:
+      context: ./server/admin
+    networks:
+      - universe-network
+
+networks:
+  app-network:
+    driver: bridge
