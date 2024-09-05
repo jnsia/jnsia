@@ -1,3 +1,17 @@
+from django import forms
 from django.contrib import admin
+from ckeditor.widgets import CKEditorWidget
+from .models import Post
 
-# Register your models here.
+class PostAdminForm(forms.ModelForm):
+    title = forms.CharField()
+    content = forms.CharField(widget=CKEditorWidget())
+
+    class Meta:
+        model = Post
+        fields = '__all__'
+
+class PostAdmin(admin.ModelAdmin):
+    form = PostAdminForm
+
+admin.site.register(Post, PostAdmin)
