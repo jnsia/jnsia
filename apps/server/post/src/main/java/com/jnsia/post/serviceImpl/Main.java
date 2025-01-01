@@ -1,55 +1,43 @@
     package com.jnsia.post.serviceImpl;
 
-    import java.util.Scanner;
+    import java.util.*;
 
     public class Main {
         public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
 
-            String[] line = sc.nextLine().split(" ");
+            int N = sc.nextInt();
 
-            int m = Integer.parseInt(line[0]);
-            int n = Integer.parseInt(line[1]);
+            Set<String> set = new HashSet<>();
+            List<String> arr = new ArrayList<>();
 
-            String[] chess = new String[m];
-
-            for (int i = 0; i < m; i++) {
-                chess[i] = sc.nextLine();
+            for (int i = 0; i < N; i++) {
+                String input = sc.next();
+                set.add(input);
             }
 
-            int answer = 64;
+            for (String string: set) {
+                arr.add(string);
+            }
 
-            for (int i = 0; i < m - 7; i++) {
-                for (int j = 0; j < n - 7; j++) {
-                    int result = 0;
-                    char prev = 'W';
-
-                    for (int k = i; k < i + 8; k++) {
-                        if (prev == 'W') {
-                            prev = 'B';
-                        } else if (prev == 'B') {
-                            prev = 'W';
-                        }
-
-                        for (int l = j; l < j + 8; l++) {
-                            if (chess[k].charAt(l) == prev) {
-                                result++;
-                            }
-
-                            if (prev == 'W') {
-                                prev = 'B';
-                            } else if (prev == 'B') {
-                                prev = 'W';
-                            }
+            for (int i = 0; i < arr.size() - 1; i++) {
+                for (int j = i + 1; j < arr.size(); j++) {
+                    if (arr.get(i).length() > arr.get(j).length()) {
+                        String temp = arr.get(i);
+                        arr.set(i, arr.get(j));
+                        arr.set(j, temp);
+                    } else if (arr.get(i).length() == arr.get(j).length()) {
+                        if (arr.get(i).compareTo(arr.get(j)) == 1) {
+                            String temp = arr.get(i);
+                            arr.set(i, arr.get(j));
+                            arr.set(j, temp);
                         }
                     }
-
-                    result = Math.min(result, 64 - result);
-                    answer = Math.min(answer, result);
                 }
             }
 
-            System.out.println(answer);
+            for (int i = 0; i < arr.size(); i++) {
+                System.out.println(arr.get(i));
+            }
         }
-
     }
