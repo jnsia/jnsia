@@ -3,7 +3,7 @@ version: "3.8"
 services:
   nginx:
     build:
-      context: ./client/nginx
+      context: ./nginx
     ports:
       - "80:80"
     networks:
@@ -11,7 +11,7 @@ services:
 
   devlog-client:
     build:
-      context: ./client/devlog
+      context: ./apps/client/devlog
     networks:
       - universe-network
 
@@ -29,7 +29,7 @@ services:
 
   universe:
     build:
-      context: ./client/universe
+      context: ./apps/client/universe
     networks:
       - universe-network
 

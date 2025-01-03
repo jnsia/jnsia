@@ -4,3 +4,5 @@ venv
 .nx/workspace-data
 
 node_modules
+
+.turbo
