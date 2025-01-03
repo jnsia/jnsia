@@ -37,7 +37,7 @@
 <div>
 <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
 <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white">
-<img src="https://img.shields.io/badge/Jira-0053CC?style=flat-square&logo=jira&logoColor=white"/>
+<img src="https://img.shields.io/badge/Jira-0053CC?style=for-the-badge&logo=jira&logoColor=white"/>
 </div>
 
 <div>
