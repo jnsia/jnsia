@@ -1,0 +1,11 @@
+{
+  "name": "@jnsia/utils",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jnsia/jnsia.git",
+  "author": "jnsia",
+  "license": "MIT",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  }
+}
