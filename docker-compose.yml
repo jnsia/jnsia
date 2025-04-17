@@ -3,33 +3,15 @@ version: "3.8"
 services:
   nginx:
     build:
-      context: ./nginx
+      context: ./
     ports:
       - "80:80"
     networks:
       - universe-network
 
-  devlog-client:
-    build:
-      context: ./apps/client/devlog
-    networks:
-      - universe-network
-
-  # luvlog-client:
-  #   build:
-  #     context: ./client/luvlog
-  #   networks:
-  #     - universe-network
-
-  # auth-client:
-  #   build:
-  #     context: ./client/auth
-  #   networks:
-  #     - universe-network
-
   universe:
     build:
-      context: ./apps/client/universe
+      context: ./apps/web/universe
     networks:
       - universe-network
 

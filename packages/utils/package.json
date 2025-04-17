@@ -1,11 +1,25 @@
 {
   "name": "@jnsia/utils",
-  "version": "1.0.0",
+  "version": "1.0.9",
   "main": "index.js",
   "repository": "https://github.com/jnsia/jnsia.git",
   "author": "jnsia",
   "license": "MIT",
+  "scripts": {
+    "build": "tsup src/* --format esm,cjs --dts --external react",
+    "lint": "eslint \"**/*.{ts,tsx,js,jsx}\" --fix"
+  },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "devDependencies": {
+    "eslint": "8",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
   }
 }
