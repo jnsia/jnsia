@@ -3,7 +3,6 @@
   "ignorePatterns": ["dist"],
   "extends": [
     "next",
-    "turbo",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended"
   ],

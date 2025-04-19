@@ -11,7 +11,7 @@
     "lint": "turbo run lint"
   },
   "dependencies": {
-    "@jnsia/utils": "^1.0.9"
+    "@jnsia/utils": "^1.0.12"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^8.30.1",
