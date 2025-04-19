@@ -1,12 +1,13 @@
 {
   "name": "@jnsia/utils",
-  "version": "1.0.10",
-  "main": "index.js",
+  "version": "1.0.12",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "repository": "https://github.com/jnsia/jnsia.git",
   "author": "jnsia",
   "license": "MIT",
   "scripts": {
-    "build": "tsup src/* --format esm,cjs --dts --external react",
+    "build": "tsup",
     "lint": "eslint \"**/*.{ts,tsx,js,jsx}\" --fix"
   },
   "publishConfig": {
@@ -14,18 +15,8 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
-    },
-    "./*": {
-      "import": [
-        "./dist/*.js",
-        "./dist/*/index.js"
-      ],
-      "require": [
-        "./dist/*.cjs",
-        "./dist/*/index.cjs"
-      ]
     }
   },
   "devDependencies": {

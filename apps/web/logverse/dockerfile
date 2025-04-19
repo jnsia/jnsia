@@ -17,4 +17,4 @@ COPY --from=build /app/package*.json ./
 
 RUN npm install --only=production
 CMD ["yarn", "start"]
-EXPOSE 5460
+EXPOSE 3000
