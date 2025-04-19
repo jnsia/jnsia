@@ -1,7 +1,12 @@
 {
   "root": true,
   "ignorePatterns": ["dist"],
-  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "extends": [
+    "next",
+    "turbo",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "plugins": ["@typescript-eslint", "import", "prettier", "react"],
   "rules": {
     "no-var": "warn",
