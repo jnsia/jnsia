@@ -1,0 +1,35 @@
+name: Build & Deploy Logverse
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'apps/web/logverse'
+
+jobs:
+  build-web:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build Web App
+        run: yarn turbo run build --filter=apps/web/logverse...
+
+  deploy-web:
+    needs: build-web
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Log in to DockerHub
+        run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+
+      - name: Build and Push Web Docker image
+        run: |
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/logverse:latest ./apps/web/logverse
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/logverse:latest

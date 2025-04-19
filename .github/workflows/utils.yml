@@ -1,0 +1,36 @@
+name: Build & Publish Utils
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'packages/utils/**'
+
+jobs:
+  build-utils:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build Utils Package
+        run: yarn turbo run build --filter=packages/utils...
+
+  deploy-utils:
+    needs: build-utils
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Authenticate with GitHub Package Registry
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.PERSONAL_ACCESS_TOKEN }}" > ~/.npmrc
+
+      - name: Publish utils to GitHub Package Registry
+        run: yarn publish --access public --cwd packages/utils
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
