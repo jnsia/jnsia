@@ -2,7 +2,7 @@
   "name": "@jnsia/utils",
   "version": "1.0.12",
   "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "repository": "https://github.com/jnsia/jnsia.git",
   "author": "jnsia",
   "license": "MIT",

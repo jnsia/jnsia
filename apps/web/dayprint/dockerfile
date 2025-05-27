@@ -13,7 +13,6 @@ WORKDIR /app
 COPY --from=build /app/build /app/build
 
 COPY package*.json ./
-RUN npm install -g yarn
 RUN yarn install --only=production
 
 CMD ["npx", "serve", "-s", "build", "-l", "3000"]
