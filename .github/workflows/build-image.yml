@@ -48,7 +48,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./apps/web/dayprint
+          context: .
           file: ./apps/web/dayprint/dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
