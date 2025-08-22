@@ -1,19 +1,33 @@
 FROM node:22 AS build
 WORKDIR /app
 
-COPY package*.json ./
-RUN npm install -g yarn
+# Copy root package files for monorepo
+COPY package.json yarn.lock ./
+COPY turbo.json ./
+COPY tsconfig.base.json ./
+
+# Copy packages
+COPY packages ./packages
+
+# Copy app
+COPY apps/web/dayprint ./apps/web/dayprint
+
+# Install dependencies at root level (for workspace)
 RUN yarn install
 
-COPY . .
-RUN npm run build
+# Build utils package first
+WORKDIR /app/packages/utils
+RUN yarn build
 
-FROM node:22
+# Build the dayprint app
+WORKDIR /app/apps/web/dayprint
+RUN yarn build
+
+FROM node:22-alpine
 WORKDIR /app
-COPY --from=build /app/build /app/build
+COPY --from=build /app/apps/web/dayprint/dist /app/dist
 
-COPY package*.json ./
-RUN yarn install --only=production
+RUN npm install -g serve
 
-CMD ["npx", "serve", "-s", "build", "-l", "3000"]
+CMD ["serve", "-s", "dist", "-l", "3000"]
 EXPOSE 3000
