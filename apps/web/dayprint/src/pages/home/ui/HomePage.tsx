@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import { QuestCreateButton, QuestCreateModal } from '../../../features/quest';
 import { QuestList } from '../../../widgets/quest-list';

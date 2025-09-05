@@ -1,20 +1,23 @@
-version: '3.8'
-
 services:
   nginx:
     build:
-      context: ./
+      context: ./infra/nginx
     ports:
       - '80:80'
+    depends_on:
+      - dayprint
     networks:
-      - universe-network
+      - universe
 
   dayprint:
     build:
-      context: ./apps/web/dayprint
+      context: .
+      dockerfile: dockerfile.dayprint
+    ports:
+      - '3000:3000'
     networks:
-      - universe-network
+      - universe
 
 networks:
-  app-network:
+  universe:
     driver: bridge
