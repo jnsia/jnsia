@@ -1,23 +1,17 @@
-version: "3.8"
+version: '3.8'
 
 services:
   nginx:
     build:
       context: ./
     ports:
-      - "80:80"
+      - '80:80'
     networks:
       - universe-network
 
-  universe:
+  dayprint:
     build:
-      context: ./apps/web/universe
-    networks:
-      - universe-network
-
-  admin:
-    build:
-      context: ./server/admin
+      context: ./apps/web/dayprint
     networks:
       - universe-network
 
