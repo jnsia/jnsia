@@ -1,7 +1,7 @@
 {
   "name": "@jnsia/utils",
   "version": "1.0.12",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "repository": "https://github.com/jnsia/jnsia.git",
   "author": "jnsia",
@@ -16,7 +16,7 @@
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.js"
     }
   },
   "devDependencies": {

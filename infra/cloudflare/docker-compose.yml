@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared
+    restart: unless-stopped
+    volumes:
+      - ./config.yml:/etc/cloudflared/config.yml
+      - ./cert.pem:/etc/cloudflared/cert.pem
+      - ./tunnel.json:/etc/cloudflared/tunnel.json
+    command: tunnel --config /etc/cloudflared/config.yml run
+    networks:
+      - universe
+
+networks:
+  universe:
+    external: true
