@@ -1,11 +1,13 @@
 services:
   nginx:
-    build:
-      context: ./infra/nginx
+    image: nginx:latest
     ports:
       - '80:80'
+    volumes:
+      - ./infra/nginx/nginx.conf:/etc/nginx/nginx.conf
     depends_on:
       - dayprint
+    container_name: nginx
     networks:
       - universe
 
@@ -15,9 +17,10 @@ services:
       dockerfile: dockerfile.dayprint
     ports:
       - '3000:3000'
+    container_name: dayprint
     networks:
       - universe
 
 networks:
   universe:
-    driver: bridge
+    external: true

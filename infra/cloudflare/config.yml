@@ -2,6 +2,8 @@ tunnel: cloudflare-tunnel
 credentials-file: /etc/cloudflared/tunnel.json
 
 ingress:
+  - hostname: "*.jnsia.space"
+    service: http://nginx:80
   - hostname: jnsia.space
     service: http://nginx:80
   - service: http_status:404
