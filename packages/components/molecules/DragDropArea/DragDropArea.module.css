@@ -1,0 +1,16 @@
+.uploadArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: #fafafa;
+}
+
+.dragover {
+  border-color: var(--color-primary);
+  background: #f0f8ff;
+}

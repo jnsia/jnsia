@@ -1,0 +1,93 @@
+.button {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Size variants */
+.size-small {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.size-medium {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.size-large {
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+.button:hover {
+  background: #dfdfdf;
+}
+
+.button:disabled {
+  background: #dbdbdb;
+  color: grey;
+  cursor: default;
+}
+
+/* Variant styles */
+.variant-primary {
+  background: var(--color-primary, #007bff);
+  color: white;
+}
+
+.variant-primary:hover:not(:disabled) {
+  background: var(--color-primary-dark, #0056b3);
+}
+
+.variant-secondary {
+  background: white;
+  color: var(--text-primary, #333);
+}
+
+.variant-secondary:hover:not(:disabled) {
+  background: var(--bg-secondary, #f8f9fa);
+}
+
+.variant-danger {
+  background: var(--color-danger, #dc3545);
+  color: white;
+}
+
+.variant-danger:hover:not(:disabled) {
+  background: var(--color-danger-dark, #c82333);
+}
+
+.variant-outline {
+  background: transparent;
+  border-width: 2px;
+}
+
+.variant-outline:hover:not(:disabled) {
+  background: var(--bg-secondary, #f8f9fa);
+}
+
+/* Color styles */
+.color-blue {
+  --color-primary: #007bff;
+  --color-primary-dark: #0056b3;
+}
+
+.color-green {
+  --color-primary: #28a745;
+  --color-primary-dark: #218838;
+}
+
+.color-red {
+  --color-primary: #dc3545;
+  --color-primary-dark: #c82333;
+}
+
+.color-gray {
+  --color-primary: #6c757d;
+  --color-primary-dark: #5a6268;
+}

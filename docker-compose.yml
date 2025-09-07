@@ -13,7 +13,7 @@ services:
 
   dayprint:
     build:
-      context: .
+      context: ./infra/dayprint
       dockerfile: dockerfile.dayprint
     ports:
       - '3000:3000'

@@ -1,0 +1,42 @@
+.searchInput {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.searchInput:focus-within {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+.input {
+  flex: 1;
+  width: 100%;
+  padding: 8px 16px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+}
+
+.input::placeholder {
+  color: #999;
+}
+
+.clearButton {
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.clearButton:hover {
+  color: #666;
+}

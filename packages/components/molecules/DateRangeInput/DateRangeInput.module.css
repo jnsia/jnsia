@@ -1,0 +1,17 @@
+.dateRangeRoot {
+  display: flex;
+  flex-direction: column;
+}
+
+.dateRangeInputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.separator {
+  color: #6b7280;
+  margin: 0 4px;
+  font-weight: 500;
+}

@@ -1,0 +1,253 @@
+.calendarRoot {
+  position: relative;
+  display: inline-block;
+}
+
+.calendarInput {
+  min-width: 140px;
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calendarInput:focus {
+  border-color: var(--color-primary, #2684ff);
+  box-shadow: 0 0 0 2px rgba(38, 132, 255, 0.1);
+}
+
+.calendarInput:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.selectedText {
+  font-size: 14px;
+  color: #374151;
+}
+
+.placeholderText {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.inputActions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+}
+
+.clearButton {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  padding: 2px;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clearButton:hover {
+  color: #666;
+}
+
+.calendarDropdown {
+  position: fixed;
+  z-index: 999999;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  width: 280px;
+  height: 350px;
+}
+
+.calendarDropdown.withTime {
+  width: 450px;
+  height: 380px;
+}
+
+.calendarContent {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+}
+
+.calendarSection {
+  flex: 1;
+}
+
+.calendarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.navButton {
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.navButton:hover {
+  background-color: #f3f4f6;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.weekDay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  font-weight: 600;
+}
+
+.dayButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dayButton:hover:not(:disabled) {
+  background-color: #f3f4f6;
+}
+
+.dayButton:disabled {
+  cursor: default;
+}
+
+.selectedDay {
+  background-color: var(--color-primary, #2684ff);
+  color: white;
+}
+
+.today {
+  border: 2px solid var(--color-primary, #2684ff);
+}
+
+.selectedDay.today {
+  background-color: var(--color-primary, #2684ff) !important;
+  color: white;
+}
+
+.timeSection {
+  width: 150px;
+  border-left: 1px solid #e5e7eb;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.timeHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  color: #6b7280;
+}
+
+.timeDisplay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8fafc;
+  border-radius: 6px;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 16px;
+}
+
+.timeScrollers {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+}
+
+.timeScroller {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrollContainer {
+  flex: 1;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: #fafbfc;
+  max-height: 200px;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scrollContainer::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 2px;
+}
+
+.scrollContainer::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.scrollItem {
+  width: 100%;
+  padding: 8px 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.scrollItem:hover {
+  background: #e2e8f0;
+}
+
+.scrollItem.selected {
+  background: var(--color-primary, #2684ff);
+  color: white;
+}
+
+.scrollItem.selected:hover {
+  background: var(--color-primary-dark, #1e40af);
+}

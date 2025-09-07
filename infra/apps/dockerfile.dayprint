@@ -3,11 +3,10 @@
 FROM node:22 AS build
 WORKDIR /app
 
-# 상대 경로로 변경
-COPY ./package.json ./yarn.lock ./
-COPY ./turbo.json ./
-COPY ./tsconfig.base.json ./
-COPY ./apps/web/dayprint .
+COPY /package.json ./yarn.lock ./
+COPY /turbo.json ./
+COPY /tsconfig.base.json ./
+COPY /apps/web/dayprint .
 
 RUN yarn install --frozen-lockfile
 RUN yarn build

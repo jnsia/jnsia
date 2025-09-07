@@ -1,0 +1,9 @@
+.expandIcon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.expandIcon.expanded {
+  transform: rotate(45deg);
+}

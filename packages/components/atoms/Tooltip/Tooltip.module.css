@@ -1,0 +1,45 @@
+/* Portal-based tooltip styles */
+.tooltipPortal {
+  pointer-events: none;
+}
+
+.tooltipContent {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.3s ease;
+  word-wrap: break-word;
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+  .tooltipContent {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+
+  .tooltipContent::after {
+    border-color: #f0f0f0 transparent transparent transparent;
+  }
+}
+
+/* Position-specific transforms */
+.tooltipPortal.top .tooltipContent {
+  transform: translateX(-50%) translateY(-100%);
+}
+
+.tooltipPortal.bottom .tooltipContent {
+  transform: translateX(-50%);
+}
+
+.tooltipPortal.left .tooltipContent {
+  transform: translateX(-100%) translateY(-50%);
+}
+
+.tooltipPortal.right .tooltipContent {
+  transform: translateY(-50%);
+}

@@ -1,0 +1,59 @@
+.dateInputRoot {
+  position: relative;
+  display: inline-block;
+}
+
+.dateInput {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 14px;
+  background: #fff;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  outline: none;
+  width: 180px;
+}
+
+.dateInput:focus {
+  border-color: var(--color-primary, #2684ff);
+  box-shadow: 0 0 0 2px rgba(38, 132, 255, 0.1);
+}
+
+.dateInput:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.dateInput::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+}
+
+.dateInput::-webkit-calendar-picker-indicator:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.clearButton {
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  padding: 2px;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clearButton:hover {
+  color: #666;
+}

@@ -1,0 +1,27 @@
+.progressBar {
+  width: 100%;
+  background: #eee;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.fill-blue {
+  background: linear-gradient(90deg, var(--color-primary), #0056b3);
+}
+
+.fill-green {
+  background: linear-gradient(90deg, #28a745, #218838);
+}
+
+.fill-red {
+  background: linear-gradient(90deg, #dc3545, #c82333);
+}
+
+.fill-yellow {
+  background: linear-gradient(90deg, #ffc107, #e0a800);
+}
