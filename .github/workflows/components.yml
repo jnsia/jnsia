@@ -26,11 +26,26 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@jnsia'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build Components Package
+        run: yarn turbo run build --filter=@jnsia/components
+
       - name: Authenticate with GitHub Package Registry
         run: |
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.PERSONAL_ACCESS_TOKEN }}" > ~/.npmrc
+          echo "@jnsia:registry=https://npm.pkg.github.com" >> ~/.npmrc
 
       - name: Publish components to GitHub Package Registry
         run: yarn publish --access public --cwd packages/components
         env:
           NODE_AUTH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          NPM_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
