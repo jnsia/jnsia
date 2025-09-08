@@ -1,11 +1,10 @@
-import { StyleProps } from '@shared/types/style';
-import { ButtonVariant } from '@shared/ui/atoms/Button/Button';
 import React from 'react';
 
 import styles from './SearchBar.module.css';
 import Button from '../../atoms/Button';
+import { ButtonVariant } from '../../atoms/Button/Button';
 
-export interface SearchBarProps extends StyleProps {
+export interface SearchBarProps {
   value: string;
   onChange: (value: string) => void;
   size?: 'small' | 'medium' | 'large';
@@ -14,6 +13,7 @@ export interface SearchBarProps extends StyleProps {
   searchText?: string;
   onClear?: () => void;
   onSearch?: () => void;
+  style?: React.CSSProperties;
 }
 
 export default function SearchBar({

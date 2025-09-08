@@ -1,0 +1,33 @@
+{
+  "name": "@jnsia/components",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "repository": "https://github.com/jnsia/jnsia.git",
+  "author": "jnsia",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint \"**/*.{ts,tsx,js,jsx}\" --fix"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0"
+  }
+}

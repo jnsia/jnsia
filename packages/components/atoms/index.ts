@@ -7,9 +7,9 @@ export { default as ExpandIcon } from './Icon/ExpandIcon';
 export { default as ProgressBar } from './ProgressBar';
 export { default as Flex } from './Flex';
 export { Tooltip } from './Tooltip';
-export { EllipsisText } from './EllipsisText';
+// export { EllipsisText } from './EllipsisText';
 
 // Types
 export type { ButtonProps } from './Button/Button';
 export type { TooltipProps } from './Tooltip';
-export type { EllipsisTextProps } from './EllipsisText';
+// export type { EllipsisTextProps } from './EllipsisText';
