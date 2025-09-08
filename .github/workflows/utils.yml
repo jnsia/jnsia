@@ -18,7 +18,7 @@ jobs:
         run: yarn install
 
       - name: Build Utils Package
-        run: yarn turbo run build --filter=packages
+        run: yarn turbo run build --filter=@jnsia/utils
 
   deploy-utils:
     needs: build-utils
