@@ -1,6 +1,6 @@
-import Button from '../../../../packages/components/atoms/Button';
-import Card from '../../../../packages/components/molecules/Card';
-import Text from '../../../../packages/components/atoms/Text';
+import Button from '@jnsia/components/atoms/Button';
+import Card from '@jnsia/components/molecules/Card';
+import Text from '@jnsia/components/atoms/Text';
 
 export default function TestComponent() {
   return (

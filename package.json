@@ -11,6 +11,7 @@
     "lint": "turbo run lint"
   },
   "dependencies": {
+    "@jnsia/components": "^1.0.1",
     "@jnsia/utils": "^1.0.12"
   },
   "devDependencies": {
