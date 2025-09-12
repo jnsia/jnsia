@@ -33,7 +33,7 @@ jobs:
           ls -la packages/ || echo "packages directory not found"
           echo "Files in apps/web/dayprint:"
           ls -la apps/web/dayprint/ || echo "apps/web/dayprint directory not found"
-      
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       
