@@ -11,6 +11,9 @@ COPY tsconfig.base.json ./
 COPY packages/ packages/
 COPY apps/ apps/
 
+# Copy .env file for build
+COPY .env apps/web/dayprint/.env
+
 RUN yarn install --frozen-lockfile
 
 # Build dependencies first

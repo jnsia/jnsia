@@ -12,9 +12,7 @@ services:
       - universe
 
   dayprint:
-    build:
-      context: .
-      dockerfile: dockerfile.dayprint
+    image: jnsia/dayprint
     ports:
       - '3000:3000'
     container_name: dayprint
