@@ -10,3 +10,6 @@ dist
 
 infra/cloudflare/*.json
 infra/cloudflare/*.pem
+
+.env
+.env.*
