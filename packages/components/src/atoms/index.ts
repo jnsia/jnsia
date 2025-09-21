@@ -3,7 +3,6 @@ export { default as Button } from './Button';
 export { default as Badge } from './Badge';
 export { default as Text } from './Text';
 export { default as Spinner } from './Spinner';
-export { default as ExpandIcon } from './Icon/ExpandIcon';
 export { default as ProgressBar } from './ProgressBar';
 export { default as Flex } from './Flex';
 export { Tooltip } from './Tooltip';
